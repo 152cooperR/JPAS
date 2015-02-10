@@ -29,8 +29,7 @@
 			<header id="header">
 				<div class="logo container">
 					<div>
-						<h1><a href="index.html" id="logo">Julies Personal Assistant</a></h1>
-						<p>{Nathan Put Slogan Here}</p>
+						<h1><a href="" id="logo">Services</a></h1>
 					</div>
 				</div>
 			</header>
@@ -38,9 +37,9 @@
 		<!-- Nav -->
 			<nav id="nav" class="skel-layers-fixed">
 				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-					<li>
-						<a href="services.html">Services</a>
+					<li><a href="index.html">Home</a></li>
+					<li class="current">
+						<a href="">Services</a>
 						<ul>
 							<li><a href="#">Entertainment / Party</a>
 
@@ -91,24 +90,34 @@
 		<!-- Main -->
 			<div id="main-wrapper">
 				<div id="main" class="container">
-					<div class="row 200%">
+					<div class="row 300%">
 						<div class="12u">
 							
 							<!-- Highlight -->
+
 								<section class="box highlight">
-									<ul class="special">
-										<li><a href="#" class="icon fa-glass"><span class="label">Magnifier</span></a></li>
-										<li><a href="#" class="icon fa-plane"><span class="label">Tablet</span></a></li>
-										<li><a href="#" class="icon fa-folder"><span class="label">Flask</span></a></li>
-										<li><a href="#" class="icon fa-calendar"><span class="label">Cog?</span></a></li>
-									</ul>
 									<header>
 										<h2>Our services</h2>
 									</header>
 									<p>
-										We offer a very wide range of services, from entertainment,to relocation services, to organization and more!<br />
-										To view all of the services we off click <a href="#ViewAllServices">here</a>.
-									</p>
+										We offer a very wide range of services,<br/>
+										from entertainment, to relocation services,<br/>
+										to organization and more!<br /></p>
+									<ul class="special">
+										<li><a href="#" class="icon fa-glass"><span class="label"></span></a></li>
+										<p>Entertainment / Party</p>
+										<li><a href="#" class="icon fa-plane"><span class="label"></span></a></li>
+										<p>Relocation Services</p>
+										<li><a href="#" class="icon fa-folder"><span class="label"></span></a></li>
+										<p>Organizational Services</p>
+										<li><a href="#" class="icon fa-calendar"><span class="label"></span></a></li>
+										<p>Scheduling and Planning</p>
+										<li><a href="#" class="icon fa-clock-o"><span class="label"></span></a></li>
+										<p>Reminder Services</p>
+										<li><a href="#Shopping" class="icon fa-shopping-cart"></a></li>
+										<p>Shopping Services</p>
+									</ul>
+
 								</section>
 
 						</div>
