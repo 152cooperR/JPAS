@@ -27,13 +27,15 @@
 <?php
 
 	$content = $_GET["content"];
+	$subset = $_GET["subset"];
+
 
 ?>
 		<!-- Header -->
 			<header id="header">
 				<div class="logo container">
 					<div>
-						<h1><a href="" id="logo">Services - <?php echo($_GET["content"]); ?></a></h1>
+						<h1><a href="" id="logo">Services - <?php echo($content); ?></a></h1>
 					</div>
 
 			</header>
@@ -46,7 +48,7 @@
 		<li class="current">
 			<a href="">Services</a>
 			<ul>
-				<li><a href="#">Entertainment / Party</a>
+				<li><a href="service.php?content=Entertainment">Entertainment / Party</a>
 
 					<ul>
 
@@ -59,22 +61,12 @@
 					</ul>
 
 				</li>
-				<li><a href="#">Relocation Services</a></li>
-				<li><a href="#">Organizational</a></li>
-				<li><a href="#">Personal Care</a></li>
-				<li><a href="#">Scheduling</a></li>
-				<li><a href="#">Reminder Services</a></li>
-				<li><a href="#">Shopping Services</a></li>
-				<li>
-					<a href="">Phasellus consequat</a>
-					<ul>
-						<li><a href="#">Lorem ipsum dolor</a></li>
-						<li><a href="#">Phasellus consequat</a></li>
-						<li><a href="#">Magna phasellus</a></li>
-						<li><a href="#">Etiam dolore nisl</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Veroeros feugiat</a></li>
+				<li><a href="service.php?content=Relocation Services">Relocation Services</a></li>
+				<li><a href="service.php?content=Organizational">Organizational</a></li>
+				<li><a href="service.php?content=Personal Care">Personal Care</a></li>
+				<li><a href="service.php?content=Scheduling">Scheduling</a></li>
+				<li><a href="service.php?content=Reminder Services">Reminder Services</a></li>
+				<li><a href="service.php?content=Shopping Services">Shopping Services</a></li>
 			</ul>
 		</li>
 		<li><a href="#AboutUs">About Us</a></li>
@@ -88,11 +80,82 @@
 
 			<!-- About -->
 			<section>
-				<h2 class="major"><span><?php echo($content); ?></span></h2>
+				<h2 class="major"><span><?php echo($subset); ?></span></h2>
 				<?php
 
-				echo("<p></p>");
+				if($content == "Entertainment" and $subset == null) {
+
+					echo('
+					<section class="box highlight">
+									<header>
+										<h2>Entertainment services</h2>
+									</header>
+									<ul class="special">
+										<li><a href="#" class="icon fa-ticket"><span class="label"></span></a></li>
+										<p>Invitations</p>
+										<li><a href="#" class="icon fa-bookmark"><span class="label"></span></a></li>
+										<p>RSVP</p>
+										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
+										<p>Vendor Coordination</p>
+
+									</ul>
+
+								</section>
+
+					');
+				}elseif($content == "Relocation Services" and $subset == null){
+					echo('
+					<section class="box highlight">
+									<header>
+										<h2>Relocation services</h2>
+									</header>
+									<ul class="special">
+										<li><a href="#" class="icon fa-truck"><span class="label"></span></a></li>
+										<p>Hire A Moving Company</p>
+										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
+										<p>Day Of Move Coordination</p>
+										<li><a href="#" class="icon fa-folder-open"><span class="label"></span></a></li>
+										<p>Pack, Un-pack & Organize</p>
+										<li><a href="#" class="icon fa-shopping-cart"><span class="label"></span></a></li>
+										<p>Stock House With Groceries</p>
+
+									</ul>
+
+								</section>
+
+					');
+
+				}elseif($content == "Shopping Services" and $subset == "Ticket Procurement"){
+
+					echo('
+					<p>If you need tickets for a concert or live event please fill out the forum bellow<br/>
+					With you information so we can reserve them for you.</p>
+					<div class="container">
+					<form method="post" action="confirm.php?service=Ticket%20Procurement">
+						<input type="text" class="" placeholder="Name" name="Name" required="true"><br>
+						<input type="email" placeholder="Email" name="Email" required="true"><br>
+						<input type="text" placeholder="Type of event" name="TOE" required="true"><br>
+						<input type="text" placeholder="Phone Number" name="phone" required="true"><br>
+						<p>Date of event</p>
+						<input type="date" class="" placeholder="Date of event" name="Date" required="true"> <br><br>
+						<input type="submit" placeholder="Place request" value="Place request">
+					</form>
+				</div>
+				');
+
+				}elseif($content == "Shopping Services" and $subset == "Grocery Shopping"){
+
+					header('Error.php');
+echo('<p>TEST</p>');
+
+				}else{
+
+
+				}
+
 				?>
+
+
 
 			</section>
 
