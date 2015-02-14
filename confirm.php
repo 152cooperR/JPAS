@@ -33,6 +33,13 @@ $type = $_POST["TOE"];
 $phone = $_POST["phone"];
 $date = $_POST["Date"];
 
+$to = '';
+$subject = '';
+$message = '';
+$headers = '';
+
+
+
 ?>
 <!-- Header -->
 <header id="header">
@@ -89,7 +96,10 @@ $date = $_POST["Date"];
                 <h2>Type of event - <?php echo($type); ?></h2>
                 <h2>Phone Number - <?php echo($phone); ?></h2>
                 <h2>Date of event - <?php echo($date); ?></h2><br/>
-                <input type="button" value="Confirm">
+                <form action="#ConfirmStuffs" >
+                    <input type="Submit" value="Confirm">
+                </form>
+
 
 
             </section>
