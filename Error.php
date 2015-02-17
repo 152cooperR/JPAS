@@ -24,41 +24,89 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body class="homepage">
+	<?php
+
+
+	$error = $_GET["e"];
+
+
+	?>
 
 		<!-- Header -->
 
 		<!-- Nav -->
-		<nav id="nav" class="skel-layers-fixed">
-			<ul>
-				<li class=""><a href="index.html">Home</a></li>
-				<li class="">
-					<a href="services.html">Services</a>
-					<ul>
-						<li><a href="service.php?content=Entertainment">Entertainment / Party</a>
+	<nav id="nav" class="skel-layers-fixed">
+		<ul>
+			<li class=""><a href="index.html">Home</a></li>
+			<li class="">
+				<a href="services.html">Services</a>
+				<ul>
+					<li><a href="service.php?content=Entertainment">Entertainment / Party</a>
 
-							<ul>
+						<ul>
 
-								<li><a href="service.php?content=Entertainment&subset=Invitations">Invitations</a></li>
-								<li><a href="service.php?content=Entertainment&subset=RSVP%20Coordination">RSVP Coordination</a></li>
-								<li><a href="service.php?content=Entertainment&subset=Vendor%20Coordination">Vendor Coordination</a></li>
-								<li><a href="service.php?content=Entertainment&subset=Grocery%20Shopping">Grocery Shopping</a></li>
-								<li><a href="service.php?content=Entertainment&subset=Ticket%20Procurement">Ticket Procurement</a></li>
+							<li><a href="service.php?content=Entertainment&subset=Invitations">Invitations</a></li>
+							<li><a href="service.php?content=Entertainment&subset=RSVP%20Coordination">RSVP Coordination</a></li>
+							<li><a href="service.php?content=Entertainment&subset=Vendor%20Coordination">Vendor Coordination</a></li>
+						</ul>
 
-							</ul>
+					</li>
+					<li><a href="service.php?content=Relocation%20Services">Relocation Services</a>
 
-						</li>
-						<li><a href="service.php?content=Relocation Services">Relocation Services</a></li>
-						<li><a href="service.php?content=Organizational">Organizational</a></li>
-						<li><a href="service.php?content=Personal Care">Personal Care</a></li>
-						<li><a href="service.php?content=Scheduling">Scheduling</a></li>
-						<li><a href="service.php?content=Reminder Services">Reminder Services</a></li>
-						<li><a href="service.php?content=Shopping Services">Shopping Services</a></li>
-					</ul>
-				</li>
-				<li><a href="#AboutUs">About Us</a></li>
-				<li><a href="#ScheduleServices">Schedule Services</a></li>
-			</ul>
-		</nav>
+						<ul>
+							<li><a href="service.php?content=Relocation%20Services&subset=Hire%20A%20Moving%20Company">Hire a moving company</a></li>
+							<li><a href="service.php?content=Relocation%20Services&subset=Day%20Of%20Move%20Coordination">Day of move coordination</a></li>
+							<li><a href="service.php?content=Relocation%20Services&subset=Pack%20un-pack%20and%20organize">Pack, un-pack & organize </a></li>
+							<li><a href="service.php?content=Relocation%20Services&subset=Stock%20house%20with%20supplies">Stock house with supplies</a></li>
+						</ul>
+
+					</li>
+					<li><a href="service.php?content=Organizational">Organizational</a>
+						<ul>
+							<li><a href="service.php?content=Organizational&subset=Home%20and%20Office%20Organization">Home and Office Organization</a></li>
+							<li><a href="service.php?content=Organizational&subset=Home%20repair">Home repair</a></li>
+							<li><a href="service.php?content=Organizational&subset=Deliveries">Deliveries</a></li>
+							<li><a href="service.php?content=Organizational&subset=Utilities%20Installation">Utilities Installation</a></li>
+							<li><a href="service.php?content=Organizational&subset=House%20Sitting">House Sitting</a></li>
+						</ul>
+					</li>
+					<li><a href="service.php?content=Personal%20Care">Personal Care</a>
+						<ul>
+							<li><a href="service.php?content=Personal%20Care&subset=Senior%20Care">Senior Care</a></li>
+						</ul>
+					</li>
+					<li><a href="service.php?content=Scheduling">Scheduling</a>
+						<ul>
+							<li><a href="service.php?content=Scheduling&subset=Laundry%20and%20dry%20cleaning">Laundry and dry cleaning</a></li>
+							<li><a href="service.php?content=Scheduling&subset=Prescription%20drop%20off%20and%20pick%20up">Prescription drop off and pick up</a></li>
+							<li><a href="service.php?content=Scheduling&subset=Post%20offices,%20UPS,%20and%20FedEx%20pickups">Post offices, UPS, and FedEx pickups</a></li>
+							<li><a href="service.php?content=Scheduling&subset=Car%20detail%20and%20service%20appointments">Car detail and service appointments</a> </li>
+							<li><a href="service.php?content=Scheduling&subset=Home%20repair">Home repair</a> </li>
+							<li><a href="service.php?content=Scheduling&subset=Restaurant%20reservations">Restaurant reservations</a></li>
+							<li><a href="service.php?content=Scheduling&subset=Car%20rentals">Car rentals</a></li>
+							<li><a href="service.php?content=Scheduling&subset=Vacation%20planning">Vacation planning</a></li>
+							<li><a href="service.php?content=Scheduling&subset=Hotel%20scheduling">Hotel scheduling</a></li>
+						</ul>
+					</li>
+					<li><a href="service.php?content=Reminder Services">Reminder Services</a></li>
+					<li><a href="service.php?content=Shopping Services">Shopping Services</a>
+						<ul>
+							<li><a href="service.php?content=Shopping%20Services&subset=Ticket%20Procurement">Ticket Procurement</a></li>
+							<li><a href="service.php?content=Shopping%20Services&subset=Grocery%20Shopping">Grocery Shopping</a></li>
+							<li><a href="service.php?content=Shopping%20Services&subset=Specific%20Gifts">Specific Gifts</a></li>
+							<li><a href="service.php?content=Shopping%20Services&subset=Gift%20Wrapping">Gift Wrapping</a></li>
+							<li><a href="service.php?content=Shopping%20Services&subset=Addressing%20for%20holiday%20cards%20and%20gifts">Addressing for holiday cards and gifts</a></li>
+							<li><a href="service.php?content=Shopping%20Services&subset=Gift%20cards%20and%20certificates">Gift cards and certificates</a></li>
+							<li><a href="service.php?content=Shopping%20Services&subset=Ship%20or%20deliver%20a%20gift">Ship or deliver a gift</a></li>
+
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#AboutUs">About Us</a></li>
+			<li><a href="#ScheduleServices">Schedule Services</a></li>
+		</ul>
+	</nav>
 		
 		<!-- Banner -->
 			<div id="banner-wrapper">
