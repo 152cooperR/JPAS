@@ -95,8 +95,8 @@
 						<li><a href="service.php?content=Scheduling&subset=Hotel%20scheduling">Hotel scheduling</a></li>
 					</ul>
 				</li>
-				<li><a href="service.php?content=Reminder Services">Reminder Services</a></li>
-				<li><a href="service.php?content=Shopping Services">Shopping Services</a>
+				<li><a href="service.php?content=Reminder%20Services">Reminder Services</a></li>
+				<li><a href="service.php?content=Shopping%20Services">Shopping Services</a>
 					<ul>
 						<li><a href="service.php?content=Shopping%20Services&subset=Ticket%20Procurement">Ticket Procurement</a></li>
 						<li><a href="service.php?content=Shopping%20Services&subset=Grocery%20Shopping">Grocery Shopping</a></li>
@@ -166,7 +166,23 @@
 
 					');
 
-				}elseif($content == "Shopping Services" and $subset == "Ticket Procurement"){
+				}elseif($content == "Organizational" and $subset == null) {
+
+
+
+                }elseif($content == "Personal sCare" and $subset == null){
+
+                }elseif($content == "Scheduling" and $subset == null){
+
+                }
+                elseif($content == "Reminder Services" and $subset == null){
+
+                }
+                elseif($content == "Shopping Services" and $subset == null){
+
+                }
+
+                if($content == "Shopping Services" and $subset == "Ticket Procurement"){
 
 					echo('
 					<p>If you need tickets for a concert or live event please fill out the forum bellow<br/>
