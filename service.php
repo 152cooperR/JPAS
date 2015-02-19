@@ -202,8 +202,8 @@
 
 				}elseif($content == "Shopping Services" and $subset == "Grocery Shopping"){
 
-					header('Error.php');
-echo('<p>TEST</p>');
+                    T_GOTO("Error.php?e=404");
+                    echo('<p>TEST</p>');
 
 				}else{
 
@@ -212,10 +212,12 @@ echo('<p>TEST</p>');
 
 				?>
 
-
-
 			</section>
+            <section>
+                <h2 class="major"><span><?php echo($subset); ?></span></h2>
 
+
+            </section>
 		</div>
 	</div>
 	<div class="row 200%">
