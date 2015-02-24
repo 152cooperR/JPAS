@@ -122,69 +122,181 @@
 			<!-- About -->
 			<section>
 				<h2 class="major"><span><?php echo($subset); ?></span></h2>
-				<?php
+                <?php
 
-				if($content == "Entertainment" and $subset == null) {
+                    if($content != null and $subset == null){
 
-					echo('
+                        if($content == "Entertainment") {
+
+                            echo('
 					<section class="box highlight">
 									<header>
 										<h2>Entertainment services</h2>
 									</header>
 									<ul class="special">
 										<li><a href="#" class="icon fa-ticket"><span class="label"></span></a></li>
-										<p>Invitations</p>
+									    	<p>Invitations</p>
 										<li><a href="#" class="icon fa-bookmark"><span class="label"></span></a></li>
-										<p>RSVP</p>
+								    		<p>RSVP</p>
 										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
-										<p>Vendor Coordination</p>
+								    		<p>Vendor Coordination</p>
 
 									</ul>
 
 								</section>
 
 					');
-				}elseif($content == "Relocation Services" and $subset == null){
-					echo('
-					<section class="box highlight">
+
+                        }elseif($content == "Relocation Services"){
+
+                            echo('
+					            <section class="box highlight">
 									<header>
 										<h2>Relocation services</h2>
-									</header>
+                                    </header>
 									<ul class="special">
 										<li><a href="#" class="icon fa-truck"><span class="label"></span></a></li>
-										<p>Hire A Moving Company</p>
+										    <p>Hire A Moving Company</p>
 										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
-										<p>Day Of Move Coordination</p>
+									    	<p>Day Of Move Coordination</p>
 										<li><a href="#" class="icon fa-folder-open"><span class="label"></span></a></li>
-										<p>Pack, Un-pack & Organize</p>
+									    	<p>Pack, Un-pack & Organize</p>
 										<li><a href="#" class="icon fa-shopping-cart"><span class="label"></span></a></li>
-										<p>Stock House With Groceries</p>
+									    	<p>Stock House With Groceries</p>
+
+									</ul>
+
+								</section>
+                            ');
+
+                        }elseif($content == "Organizational") {
+
+                            echo('
+
+                            <section class="box highlight">
+									<header>
+										<h2>Organizational services</h2>
+                                    </header>
+									<ul class="special">
+
+                                        <li><a class="icon fa-folder" href="service.php?content=Organizational&subset=Home%20and%20Office%20Organization"></a></li>
+                                               <p>Home and Office Organization</p>
+						                <li><a class="icon fa-wrench" href="service.php?content=Organizational&subset=Home%20repair"></a></li>
+						                       <p>Home repair</p>
+						                <li><a  class="icon fa-truck" href="service.php?content=Organizational&subset=Deliveries"></a></li>
+						                      <p>Deliveries</p>
+						                <li><a class="icon fa-male" href="service.php?content=Organizational&subset=Utilities%20Installation"></a></li>
+                                                <p>Utilities Installation</p>
+                                        <li><a class="icon fa-home" href="service.php?content=Organizational&subset=House%20Sitting"></a></li>
+                                                <p>House Sitting</p>
+									</ul>
+
+								</section>
+
+                            ');
+
+                        }elseif($content == "Personal Care"){
+
+                            echo('
+
+                            <section class="box highlight">
+									<header>
+										<h2>Personal Care services</h2>
+                                    </header>
+									<ul class="special">
+										<li><a href="service.php?content=Personal%20Care&subset=Senior%20Care" class="icon fa-female"><span class="label"></span></a></li>
+										    <p>Senior Care</p>
 
 									</ul>
 
 								</section>
 
-					');
+                            ');
 
-				}elseif($content == "Organizational" and $subset == null) {
+                        }elseif($content == "Scheduling"){
+
+                            echo('
+
+                            <section class="box highlight">
+									<header>
+										<h2>Scheduling services</h2>
+                                    </header>
+									<ul class="special">
+
+										<li><a class="icon " href="service.php?content=Scheduling&subset=Laundry%20and%20dry%20cleaning">Laundry and dry cleaning</a></li>
+						                <li><a class="icon " href="service.php?content=Scheduling&subset=Prescription%20drop%20off%20and%20pick%20up">Prescription drop off and pick up</a></li>
+						                <li><a class="icon " href="service.php?content=Scheduling&subset=Post%20offices,%20UPS,%20and%20FedEx%20pickups">Post offices, UPS, and FedEx pickups</a></li>
+					                	<li><a class="icon " href="service.php?content=Scheduling&subset=Car%20detail%20and%20service%20appointments">Car detail and service appointments</a> </li>
+					                	<li><a class="icon " href="service.php?content=Scheduling&subset=Home%20repair">Home repair</a> </li>
+					                	<li><a class="icon " href="service.php?content=Scheduling&subset=Restaurant%20reservations">Restaurant reservations</a></li>
+					                	<li><a class="icon " href="service.php?content=Scheduling&subset=Car%20rentals">Car rentals</a></li>
+					                	<li><a class="icon " href="service.php?content=Scheduling&subset=Vacation%20planning">Vacation planning</a></li>
+					                	<li><a class="icon " href="service.php?content=Scheduling&subset=Hotel%20scheduling">Hotel scheduling</a></li>
+
+									</ul>
+
+								</section>
+
+                            ');
+
+                        }elseif($content == "Reminder Services"){
+
+                            echo('
+
+                           <section class="box highlight">
+									<header>
+										<h2>Reminder services</h2>
+                                    </header>
+									<ul class="special">
+										<li><a href="#" class="icon fa-ban"><span class="label"></span></a></li>
+										    <p>We have noting here yet :(</p>
+									</ul>
+
+								</section>
+
+                            ');
+
+                        }elseif($content == "Shopping Services"){
+
+                            echo('
+
+                            <section class="box highlight">
+									<header>
+										<h2>Relocation services</h2>
+                                    </header>
+									<ul class="special">
+										<li><a href="#" class="icon fa-truck"><span class="label"></span></a></li>
+										    <p>Hire A Moving Company</p>
+										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
+									    	<p>Day Of Move Coordination</p>
+										<li><a href="#" class="icon fa-folder-open"><span class="label"></span></a></li>
+									    	<p>Pack, Un-pack & Organize</p>
+										<li><a href="#" class="icon fa-shopping-cart"><span class="label"></span></a></li>
+									    	<p>Stock House With Groceries</p>
+
+									</ul>
+
+								</section>
+
+                            ');
+
+                        }
+                    }elseif($content != null and $subset != null){
+
+                    }
+
+                ?>
 
 
 
-                }elseif($content == "Personal sCare" and $subset == null){
 
-                }elseif($content == "Scheduling" and $subset == null){
+                <?php
 
-                }
-                elseif($content == "Reminder Services" and $subset == null){
 
-                }
-                elseif($content == "Shopping Services" and $subset == null){
-
-                }
 
                 if($content == "Shopping Services" and $subset == "Ticket Procurement"){
 
-					echo('
+                    echo('
 					<p>If you need tickets for a concert or live event please fill out the forum bellow<br/>
 					With you information so we can reserve them for you.</p>
 					<div class="container">
@@ -200,17 +312,18 @@
 				</div>
 				');
 
-				}elseif($content == "Shopping Services" and $subset == "Grocery Shopping"){
+                }elseif($content == "Shopping Services" and $subset == "Grocery Shopping"){
 
                     T_GOTO("Error.php?e=404");
                     echo('<p>TEST</p>');
 
-				}else{
+                }else{
 
 
-				}
+                }
 
-				?>
+                ?>
+
 
 			</section>
             <section>
