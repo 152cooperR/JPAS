@@ -1,15 +1,5 @@
-<html>
-<head>
+<?php
 
-</head>
-<body>
-<form method="get" action="service.php?services=<?php $_GET["content"] ?>">
+require("api/api.php");
+addUser("TEST", "TEST");
 
-    <input type="text" name="content">
-    <input type="submit">
-</form>
-</body>
-
-
-
-</html>

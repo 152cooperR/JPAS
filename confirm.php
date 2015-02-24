@@ -38,8 +38,6 @@ $subject = '';
 $message = '';
 $headers = '';
 
-
-
 ?>
 <!-- Header -->
 <header id="header">
