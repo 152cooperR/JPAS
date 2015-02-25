@@ -11,6 +11,12 @@ function get_mysql(){
     return $mysql;
 }
 get_mysql();
+
+ifTablesExist();
+function ifDataBaseExists(){
+
+    get_mysql()->query("CREATE DATABASE IF NOT EXISTS JPAS;");
+}
 function addUser($username, $password){
 
     get_mysql()->query("INSERT INTO WebLogins (Username, Password) VALUES ('$username', '$password')");
