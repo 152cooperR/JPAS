@@ -1,32 +1,28 @@
 <!DOCTYPE HTML>
-<!--
-	TXT by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
     <title>Julies Personal Assisstant</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
+    <!--[if lte IE 8]>
+    <script src="/JPAS/css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/JPAS/js/jquery.min.js"></script>
+    <script src="/JPAS/js/jquery.dropotron.min.js"></script>
+    <script src="/JPAS/js/skel.min.js"></script>
+    <script src="/JPAS/js/skel-layers.min.js"></script>
+    <script src="/JPAS/js/init.js"></script>
     <noscript>
-        <link rel="stylesheet" href="css/skel.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/style-desktop.css" />
+        <link rel="stylesheet" href="JPAS/css/skel.css" />
+        <link rel="stylesheet" href="JPAS/css/style.css" />
+        <link rel="stylesheet" href="JPAS/css/style-desktop.css" />
     </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
 </head>
 <body class="homepage">
 <?php
 
-$content = $_GET["content"];
 $subset = $_GET["subset"];
 
 
@@ -35,7 +31,7 @@ $subset = $_GET["subset"];
 <header id="header">
     <div class="logo container">
         <div>
-            <h1><a href="" id="logo">Services - <?php echo($content); ?></a></h1>
+            <h1><a href="" id="logo">Services - Entertainment</a></h1>
         </div>
 
 </header>
@@ -123,12 +119,26 @@ $subset = $_GET["subset"];
                 <h2 class="major"><span><?php echo($subset); ?></span></h2>
                 <?php
 
-                if($content != null and $subset == null) {
 
-                    if ($content == "Entertainment") {
+                    if ($subset == null) {
 
                         echo('
 					<section class="box highlight">
+									<header>
+										<h2>Entertainment services</h2>
+									</header>
+									>for
+
+								</section>
+
+					');
+
+                    }
+                    if($subset == "Invitations"){
+
+                        echo('
+
+                        <section class="box highlight">
 									<header>
 										<h2>Entertainment services</h2>
 									</header>
@@ -144,17 +154,38 @@ $subset = $_GET["subset"];
 
 								</section>
 
-					');
+                        ');
+
+                    }else if ($subset == "RSVP Coordination"){
+
+                        echo('
+
+                        <section class="box highlight">
+									<header>
+										<h2>Entertainment services</h2>
+									</header>
+									<ul class="special">
+										<li><a href="#" class="icon fa-ticket"><span class="label"></span></a></li>
+									    	<p>Invitations</p>
+										<li><a href="#" class="icon fa-bookmark"><span class="label"></span></a></li>
+								    		<p>RSVP</p>
+										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
+								    		<p>Vendor Coordination</p>
+
+									</ul>
+
+								</section>
+
+                        ');
+
+                    }else if ($subset == "Vendor Coordination"){
+
+                        echo('');
 
                     }
-                }
+
 
                 ?>
-
-            </section>
-            <section>
-                <h2 class="major"><span><?php echo($subset); ?></span></h2>
-
 
             </section>
         </div>
