@@ -133,54 +133,38 @@ $subset = $_GET["subset"];
 
 					');
 
-                    }
-                    if($subset == "Invitations"){
+                    } elseif($subset == "Invitations"){
 
                         echo('
 
-                        <section class="box highlight">
-									<header>
-										<h2>Entertainment services</h2>
-									</header>
-									<ul class="special">
-										<li><a href="#" class="icon fa-ticket"><span class="label"></span></a></li>
-									    	<p>Invitations</p>
-										<li><a href="#" class="icon fa-bookmark"><span class="label"></span></a></li>
-								    		<p>RSVP</p>
-										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
-								    		<p>Vendor Coordination</p>
 
-									</ul>
-
-								</section>
 
                         ');
 
-                    }else if ($subset == "RSVP Coordination"){
+                    }elseif ($subset == "RSVP Coordination"){
 
                         echo('
 
-                        <section class="box highlight">
-									<header>
-										<h2>Entertainment services</h2>
-									</header>
-									<ul class="special">
-										<li><a href="#" class="icon fa-ticket"><span class="label"></span></a></li>
-									    	<p>Invitations</p>
-										<li><a href="#" class="icon fa-bookmark"><span class="label"></span></a></li>
-								    		<p>RSVP</p>
-										<li><a href="#" class="icon fa-male"><span class="label"></span></a></li>
-								    		<p>Vendor Coordination</p>
 
-									</ul>
-
-								</section>
 
                         ');
 
-                    }else if ($subset == "Vendor Coordination"){
+                    }elseif ($subset == "Vendor Coordination"){
 
-                        echo('');
+                        echo('
+
+
+
+                        ');
+
+                    }else{
+
+
+                        echo('
+
+                        <script type="text/javascript">location.href = "Error.php?e=404";</script>
+
+                    ');
 
                     }
 

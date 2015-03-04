@@ -114,3 +114,101 @@ $subset = $_GET["subset"];
         <li><a href="#ScheduleServices">Schedule Services</a></li>
     </ul>
 </nav>
+<footer id="footer" class="container">
+    <div class="row 200%">
+        <div class="12u" >
+
+            <!-- About -->
+            <section>
+                <?php
+
+
+                if ($subset == null) {
+
+                    echo('
+					<section class="box highlight">
+									<header>
+										<h2>Relocation services</h2>
+									</header>
+
+
+								</section>
+
+					');
+
+                }
+                elseif($subset == "Hire a moving company"){
+
+                    echo('
+
+                        <h2 class="major"><span><?php echo($subset); ?></span></h2>
+
+                    ');
+
+
+                }elseif($subset == "Day of move coordination"){
+
+                    echo('
+
+
+
+                    ');
+
+                }elseif($subset == "Pack un-pack and organize "){
+
+                    echo('
+                            <h2 class="major"><span><?php echo($subset); ?></span></h2>
+
+
+                    ');
+
+                }elseif($subset == "Stock house with supplies"){
+
+                    echo('
+                        <h2 class="major"><span><?php echo($subset); ?></span></h2>
+
+
+                    ');
+
+                }else{
+
+                    echo('
+
+                        <script type="text/javascript">location.href = "Error.php?e=404";</script>
+
+                    ');
+
+                }
+
+
+
+                ?>
+
+            </section>
+        </div>
+    </div>
+    <div class="row 200%">
+        <div class="12u">
+
+            <!-- Contact -->
+            <section>
+                <h2 class="major"><span>Social Media</span></h2>
+                <ul class="contact">
+                    <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                    <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul class="menu">
+            <li>&copy; Julies Personal Assisstant. All rights reserved</li><li>Style by: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+
+</footer>
+</body>
+</html>
