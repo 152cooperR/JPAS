@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Julies Personal Assisstant</title>
+    <title>JPAS - Services</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -35,7 +35,7 @@ $subset = $_GET["subset"];
 <header id="header">
     <div class="logo container">
         <div>
-            <h1><a href="" id="logo">Services - <?php echo($content); ?></a></h1>
+            <h1><a href="" id="logo">Services - Personal Care Services</a></h1>
         </div>
 
 </header>
@@ -114,3 +114,71 @@ $subset = $_GET["subset"];
         <li><a href="#ScheduleServices">Schedule Services</a></li>
     </ul>
 </nav>
+
+<footer id="footer" class="container">
+    <div class="row 200%">
+        <div class="12u" >
+
+            <!-- About -->
+            <section>
+                <?php
+
+
+                if ($subset == null) {
+
+                    echo('
+
+                            <section class="box highlight">
+									<header>
+										<h2>Senior Care</h2>
+									</header>
+
+
+								</section>
+
+					');
+
+                }else{
+
+                    echo('
+
+                        <script type="text/javascript">location.href = "Error.php?e=404";</script>
+
+                    ');
+
+                }
+
+
+
+                ?>
+
+            </section>
+        </div>
+    </div>
+    <div class="row 200%">
+        <div class="12u">
+
+            <!-- Contact -->
+            <section>
+                <h2 class="major"><span>Social Media</span></h2>
+                <ul class="contact">
+                    <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                    <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul class="menu">
+            <li>&copy; Julies Personal Assisstant. All rights reserved</li><li>Style by: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+
+</footer>
+
+
+</body>
+</html>

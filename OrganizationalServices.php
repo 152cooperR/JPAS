@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Julies Personal Assisstant</title>
+    <title>JPAS - Services</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -35,10 +35,10 @@ $subset = $_GET["subset"];
 <header id="header">
     <div class="logo container">
         <div>
-            <h1><a href="" id="logo">Services - <?php echo($content); ?></a></h1>
+            <h1><a href="" id="logo">Services - Organizational</a></h1>
         </div>
 
-</header>
+</header>   
 
 <!-- Nav -->
 
@@ -114,3 +114,129 @@ $subset = $_GET["subset"];
         <li><a href="#ScheduleServices">Schedule Services</a></li>
     </ul>
 </nav>
+
+<footer id="footer" class="container">
+    <div class="row 200%">
+        <div class="12u" >
+
+            <!-- About -->
+            <section>
+
+                <?php
+
+/*
+ *
+ *  <li><a href="service.php?content=Organizational&subset=Home%20and%20Office%20Organization">Home and Office Organization</a></li>
+    <li><a href="service.php?content=Organizational&subset=Home%20repair">Home repair</a></li>
+    <li><a href="service.php?content=Organizational&subset=Deliveries">Deliveries</a></li>
+    <li><a href="service.php?content=Organizational&subset=Utilities%20Installation">Utilities Installation</a></li>
+    <li><a href="service.php?content=Organizational&subset=House%20Sitting">House Sitting</a></li>
+ *
+ * */
+                if ($subset == null) {
+
+                    echo('
+                    <h2 class="major"><span>Organization</span></h2>
+					 <section class="box highlight">
+									<header>
+										<h2>Organizational services</h2>
+                                    </header>
+									<ul class="special">
+
+                                        <li><a class="icon fa-folder" href="service.php?content=Organizational&subset=Home%20and%20Office%20Organization"></a></li>
+                                               <p>Home and Office Organization</p>
+						                <li><a class="icon fa-wrench" href="service.php?content=Organizational&subset=Home%20repair"></a></li>
+						                       <p>Home repair</p>
+						                <li><a  class="icon fa-truck" href="service.php?content=Organizational&subset=Deliveries"></a></li>
+						                      <p>Deliveries</p>
+						                <li><a class="icon fa-male" href="service.php?content=Organizational&subset=Utilities%20Installation"></a></li>
+                                                <p>Utilities Installation</p>
+                                        <li><a class="icon fa-home" href="service.php?content=Organizational&subset=House%20Sitting"></a></li>
+                                                <p>House Sitting</p>
+									</ul>
+
+								</section>
+
+					');
+
+                } elseif($subset == "Home and Office Organization"){
+
+                    echo('
+
+
+
+                        ');
+
+                }elseif ($subset == "Home repair"){
+
+                    echo('
+
+
+
+                        ');
+
+                }elseif ($subset == "Deliveries"){
+
+                    echo('
+
+
+
+                        ');
+
+                }elseif($subset == "Utilities Installation"){
+
+                    echo('
+
+
+
+                        ');
+
+                }elseif($subset == "House Sitting"){
+                    echo('
+
+
+
+                        ');
+                } else{
+
+
+                    echo('
+
+                        <script type="text/javascript">location.href = "Error.php?e=404";</script>
+
+                    ');
+
+                }
+
+
+                ?>
+
+            </section>
+        </div>
+    </div>
+    <div class="row 200%">
+        <div class="12u">
+
+            <!-- Contact -->
+            <section>
+                <h2 class="major"><span>Social Media</span></h2>
+                <ul class="contact">
+                    <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                    <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul class="menu">
+            <li>&copy; Julies Personal Assisstant. All rights reserved</li><li>Style by: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+
+</footer>
+
+</body>
+</html>
