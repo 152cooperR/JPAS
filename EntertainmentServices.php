@@ -138,6 +138,7 @@ $subset = $_GET["subset"];
 								</section>
 
 					');
+                        return;
 
                     } elseif($subset == "Invitations"){
 
@@ -146,6 +147,7 @@ $subset = $_GET["subset"];
 
 
                         ');
+                        return;
 
                     }elseif ($subset == "RSVP Coordination"){
 
@@ -154,7 +156,7 @@ $subset = $_GET["subset"];
 
 
                         ');
-
+                        return;
                     }elseif ($subset == "Vendor Coordination"){
 
                         echo('
@@ -162,6 +164,7 @@ $subset = $_GET["subset"];
 
 
                         ');
+                        return;
 
                     }else{
 
@@ -171,7 +174,7 @@ $subset = $_GET["subset"];
                         <script type="text/javascript">location.href = "Error.php?e=404";</script>
 
                     ');
-
+                        return;
                     }
 
 

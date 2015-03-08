@@ -1,14 +1,5 @@
+Julies Personal Assistant Service, PHP backend by Nathan Rhodes.
 TXT by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-
-A new, fully responsive portfolio/business style website template. I've been experimenting 
-with minimalist styles lately and this design is one of many in the works that exemplifies 
-this new direction. Hope you enjoy it.
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
 
 (* = Not included)
 
