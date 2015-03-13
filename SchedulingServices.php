@@ -35,7 +35,7 @@ $subset = $_GET["subset"];
 <header id="header">
     <div class="logo container">
         <div>
-            <h1><a href="" id="logo">Services - <?php echo($content); ?></a></h1>
+            <h1><a href="" id="logo">Services - Scheduling</a></h1>
         </div>
 
 </header>
@@ -86,7 +86,7 @@ $subset = $_GET["subset"];
                     <ul>
                         <li><a href="service.php?content=Scheduling&subset=Laundry%20and%20dry%20cleaning">Laundry and dry cleaning</a></li>
                         <li><a href="service.php?content=Scheduling&subset=Prescription%20drop%20off%20and%20pick%20up">Prescription drop off and pick up</a></li>
-                        <li><a href="service.php?content=Scheduling&subset=Post%20offices,%20UPS,%20and%20FedEx%20pickups">Post offices, UPS, and FedEx pickups</a></li>
+                        <li><a href="service.php?content=Scheduling&subset=Post%20offices%20UPS%20and%20FedEx%20pickups">Post offices, UPS, and FedEx pickups</a></li>
                         <li><a href="service.php?content=Scheduling&subset=Car%20detail%20and%20service%20appointments">Car detail and service appointments</a> </li>
                         <li><a href="service.php?content=Scheduling&subset=Home%20repair">Home repair</a> </li>
                         <li><a href="service.php?content=Scheduling&subset=Restaurant%20reservations">Restaurant reservations</a></li>
@@ -114,3 +114,154 @@ $subset = $_GET["subset"];
         <li><a href="#ScheduleServices">Schedule Services</a></li>
     </ul>
 </nav>
+<footer id="footer" class="container">
+    <div class="row 200%">
+        <div class="12u" >
+
+            <!-- About -->
+            <section>
+                <?php
+
+
+                if ($subset == null) {
+
+                    echo('
+
+                             <h2 class="major"><span>Scheduling Services</span></h2>
+
+
+					');
+                    return;
+
+
+                }else if ($subset == "Laundry and dry cleaning"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Prescription drop off and pick up"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Post offices UPS and FedEx pickups"){
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Car detail and service appointments"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Home repair"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Restaurant reservations"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Car rentals"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Vacation planning"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }else if ($subset == "Hotel scheduling"){
+
+                    echo('<h2 class="major"><span>'. $subset .'</span></h2>');
+
+                    echo('
+
+
+
+                    ');
+
+                }
+                else{
+
+
+                    echo('
+
+                        <script type="text/javascript">location.href = "Error.php?e=404";</script>
+
+                    ');
+                    return;
+                }
+
+
+                ?>
+
+            </section>
+        </div>
+    </div>
+    <div class="row 200%">
+        <div class="12u">
+
+            <!-- Contact -->
+            <section>
+                <h2 class="major"><span>Social Media</span></h2>
+                <ul class="contact">
+                    <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                    <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div id="copyright">
+        <ul class="menu">
+            <li>&copy; Julies Personal Assisstant. All rights reserved</li><li>Style by: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+
+</footer>
+</body>
+</html>
