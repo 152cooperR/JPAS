@@ -2,7 +2,7 @@
 define ("ENCRYPTION_KEY", ")(*&^%$$%%^%$%#$%#$^&^&*^");
 function get_mysql(){
 
-    $mysql = new mysqli("localhost","root","root","JPAS", 8889);
+    $mysql = new mysqli('localhost', 'root', 'root', 'jpas', 25565);
 
     if($mysql->connect_error){
         die($mysql->connect_error);
